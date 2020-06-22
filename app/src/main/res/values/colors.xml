@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#293f6e</color>
+    <color name="colorPrimaryDark">#1e3462</color>
+    <color name="colorAccent">#4973ed</color>
+
+    <color name="textColor">@android:color/black</color>
+    <color name="bulbColor">@android:color/black</color>
+    <color name="post_background">@android:color/white</color>
+
+    <color name="imageBackgroundTint">#C3C3C3</color>
+    <color name="lightGrey">#A2A2A2</color>
+    <color name="lightGrey2">#EAEAEA</color>
+</resources>

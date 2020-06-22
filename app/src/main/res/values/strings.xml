@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PagingApp</string>
+
+    <string name="post_title">Post Title</string>
+    <string name="post_author">Post Author</string>
+
+    <string name="appbar_blog_post">Blog Post</string>
+</resources>
