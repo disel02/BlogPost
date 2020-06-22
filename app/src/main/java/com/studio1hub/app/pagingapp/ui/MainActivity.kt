@@ -6,11 +6,13 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.studio1hub.app.pagingapp.R
 import com.studio1hub.app.pagingapp.ui.adapter.CoffeePostsAdapter
+import com.studio1hub.app.pagingapp.utils.CheckNetwork
 import com.studio1hub.app.pagingapp.viewmodel.MainViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -26,8 +28,12 @@ class MainActivity : AppCompatActivity() {
 
         mainViewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
 
-        observeLiveData()
         initializeList()
+
+        if(CheckNetwork.isNetworkAvailable(this))
+            observeLiveData()
+        else
+            Toast.makeText(this,"Please check your network connection!",Toast.LENGTH_SHORT).show()
     }
 
     private fun observeLiveData() {
